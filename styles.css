@@ -190,10 +190,7 @@ h3{
 }
  
 
-.parrallax, .conference{
-    /* transform: translate(4rem, 10rem); */
-    
-}
+
 #books{
     
     top: 135%;
@@ -520,11 +517,11 @@ h3{
            min-height: 90vh;
        }
        .skill-content{
-        transform: translateY(-2rem)
+        transform: translateY(0rem)
        }
        .skill-list{
            display: block;
-           top: 18% ;
+           top: 21% ;
            
        }
        .skill-list div{
