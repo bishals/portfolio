@@ -1,0 +1,449 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+html, body{
+    height: 100%;
+    
+    width: 100%;
+    
+    /* position: relative; */
+
+    
+}
+body{
+    
+    padding: 0 5px;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+}
+#nav-icon{
+    position: absolute;
+    right: 0;
+    z-index: 2000;
+}
+#nav-icon span{
+    height: 9px;
+    width: 40px;
+    background: greenyellow;
+    display: block;
+    margin: 4px;
+    cursor: pointer;
+    transition: .25s ease-in-out;
+    visibility: hidden;
+}
+#nav-menu:checked ~ #nav-icon span:nth-child(1){
+    transform: rotate(135deg) translate(10px, -8px);
+}
+#nav-menu:checked ~ #nav-icon span:nth-child(2){
+    display: none;
+}
+#nav-menu:checked ~ #nav-icon span:nth-child(3){
+    transform: rotate(-135deg);
+}
+input[type='checkbox']{
+    display: none;
+}
+.about-container, .container{
+    min-width: 375px;
+    width: 98.7%;
+    position: absolute;
+}
+.about-container{
+    /* position: relative; */
+    /* width: 100%; */
+    height: 90%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.199),rgba(170, 167, 157, 0.61)), url("images/lion.jpg") center fixed;  
+    background-size: cover; 
+    clip-path: polygon(0 0, 100% 0%, 100% 61%, 0 100%);
+    z-index: 10;
+    /* background-attachment: fixed; */
+    /* -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover; */
+    
+    
+
+}
+.nav{
+    position: fixed;
+    top: 0;
+    width: 98.6%;
+    background: rgba(0, 0, 0, 0.507);
+    z-index: 1000;
+    
+}
+
+
+li{
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 1rem 1.5rem;
+}
+li:hover{
+    background: black;
+}
+.nav-link{
+    font-size: 1rem;
+    color:white;
+    text-decoration: none;
+}
+.profile-image{
+    width: 25%;
+    height: 25%;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+.about{
+    width: 50%;
+    padding: 1rem;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+ 
+}
+h1, h2{
+    font-weight: normal;
+}
+
+h1{
+    font-size: 2rem;
+    margin-bottom: 0px;    
+}
+h2{
+    font-size: 1.5rem;
+}
+h2, .line{
+    margin-top: 0px;
+    margin-bottom: 1rem;
+}
+.line{
+    margin-left: 50%;
+    transform: translateX(-50%);
+    height: 5px;
+    width: 60%;
+    background-color: rgb(88, 87, 87);
+}
+.about-content p{
+    max-width: 90%;
+    font-size: 1rem;
+    color: rgb(34, 33, 33);
+    
+}
+
+h3{
+    font-size: 28px;
+    font-weight: normal;
+    margin-top: 100px;
+}
+
+.container{
+    /* width: 99.4%; */
+    height: 80%;
+    /* top:-49%; */
+    /* position: absolute;      */
+}
+
+
+#mysites{
+   top: 55%;
+    background: linear-gradient(to right,rgba(170, 167, 157, 0.678),rgba(170, 167, 157, 0.849)), url('images/coding.jpg') center fixed;
+    background-size: contain;
+    z-index: 1;
+  
+}
+
+.site-image{
+    /* background: chartreuse; */
+    display: flex;
+    height: auto;
+    justify-content: center;
+    margin-top: 10rem;
+    
+}
+
+.mysites-content{
+    transform: translateY(8rem);
+    
+}
+.mysites-content a{
+    text-decoration: none;
+    color: black;
+    font-style: italic;
+}
+.site-image img{
+    width: 300px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin: 1rem;
+    opacity: 0.5;
+    transition: all 1s;
+}
+.site-image img:hover, .book-image img:hover, .skill-list>div>i:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
+ 
+
+.parrallax, .conference{
+    /* transform: translate(4rem, 10rem); */
+    
+}
+#books{
+    
+    top: 135%;
+    background: linear-gradient(to right,rgba(170, 167, 157, 0.678),rgba(170, 167, 157, 0.849)), url('images/books.jpg') center fixed; 
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0%, 100% 61%, 0 100%);
+    z-index: 3;
+}
+.books-list{
+    display: flex;
+    justify-content: center;
+    
+    margin-top: -3rem;
+}
+.book-content{
+    transform: translateY(-4rem);
+}
+.book-image img{
+    height: 200px;
+    width: 150px;
+    margin: 1rem;
+    opacity: 0.5;
+    transition: all 1s;
+}
+.book-title{
+    font-weight: bold;
+    font-size: 1rem;
+}
+.book-author{
+    color: rgb(11, 1, 105);
+}
+#skills{
+    top: 183%;
+    background: linear-gradient(to right,rgba(170, 167, 157, 0.651),rgba(170, 167, 157, 0.74)), url('images/skills.jpg') center fixed;    
+    z-index: 2;
+}
+.skill-content{
+    transform: translateY(4.5rem);
+}
+.skill-list{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+     transform: translateX(-50%);
+    display: flex;
+}
+
+.skill-list i{
+    font-size: 8rem;
+    background: transparent;
+    margin: .5rem 2rem;
+    opacity: 0.5;
+    transition: all 1s;
+}
+.skill-list-title{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+.html{
+  
+    color: rgb(82, 21, 151);
+    
+}
+.css{
+  
+    color: rgb(146, 15, 103);
+   
+}
+.js{
+  
+    color: rgb(16, 7, 99);
+    
+}
+.nodejs > .fa-node{
+    background: green;
+}
+.nodejs{
+    color: rgb(248, 178, 86);
+    
+}
+.contact-me {  
+    height: 350px;
+    top: 263%;
+    background: linear-gradient(to right,rgba(170, 167, 157, 0.815),rgba(170, 167, 157, 0.925)), url('images/contact.jpg') center fixed;
+    background-size: cover; 
+    z-index: 4;
+   text-align: center;
+}
+
+.contact-info {
+ 
+  font-size: 1rem;
+  margin-top: 30px;
+}
+.contact-link {
+  font-weight: normal;
+  font-size: 13px;
+}
+
+.line2{
+    width: 50%;
+    height: 5px;
+    margin: 5px auto;
+    background: gray;
+
+}
+
+@media screen and (max-width: 1200px){
+  
+  .mysites-content{
+    transform: translateY(8rem);
+    
+}
+.site-image{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#books{
+    min-height: 120vh;
+}
+  .books-list{
+    flex-wrap: wrap;
+  }
+  #skills{
+      top: 200%;
+      min-height: 100vh;
+  }
+  .skill-content{
+    transform: translateY(20rem);
+}
+.skill-list{
+    top: 60%;
+}
+.contact-me{
+    top: 300%;
+}
+}
+
+
+@media screen and (max-width: 900px){
+    .container:not(.contact-me){
+      min-height: 100vh;
+  }
+    #nav-icon span{
+        visibility: visible;
+    }
+    #nav-menu:checked ~ .nav li{
+        display: block;
+    }
+
+    #nav-menu:checked ~ .about-container .profile-image{
+       height: auto; 
+       position: absolute;
+       width: 20%;
+       right: 5px;   
+    }
+    #nav-menu:checked ~ .about-container .about{
+        position: relative;
+        top: 85%;
+        height: 100vh;
+      
+    }
+    #nav-menu:checked ~ .about-container .about-content{
+        width: 80%; 
+    }
+    #nav-menu:checked ~ .about-container .line{
+        width: 80%;
+    }
+    .about-container{
+        min-height: 100vh;
+    }
+
+    .about{
+        width: 100%;
+        height: auto;
+        top: 30%;
+    }
+    
+    li{
+        display: none;
+    }
+    
+    #mysites{
+        top: 60%;
+        min-height: 120vh;
+    }
+    .note{
+        max-width: 50%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+   .site-image{
+       display: block;
+   }
+   #books{
+       top: 180%;
+       min-height: 150vh;
+   }
+   #skills{
+       top: 271%;
+   }
+   #contact{
+       top: 350%;
+   }
+   .skill-content{
+    transform: translateY(15rem)
+   }
+   .skill-list{
+       top: 50% ;
+       
+   }
+   .skill-list i{
+    margin: 1rem;
+    font-size: 5rem;
+   }
+}
+
+@media screen and (max-width: 600px){
+
+    .note{
+        max-width: 70%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+  
+    .skill-list i{
+        margin: 0;
+       }
+       #books{
+           min-height: 190vh;
+       }
+       #skills{
+           top: 296%;
+       }
+       .skill-content{
+        transform: translateY(25rem)
+       }
+       .skill-list{
+           top: 75% ;
+           
+       }
+       #contact{
+           top: 395%;
+       }
+ 
+}
+
+
+
