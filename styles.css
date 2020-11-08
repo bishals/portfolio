@@ -478,7 +478,7 @@ h3{
     .site-image{
         /* width: 110%; */
         top: 0;
-        margin-top: 6rem;
+        margin-top: 7rem;
     }
 
     #nav-menu:checked ~ .about-container .profile-image{
@@ -494,7 +494,7 @@ h3{
         top: 55%;
     }
     .mysites-content{
-        transform: translateY(-5rem);
+        transform: translateY(-4rem);
     }
     .note{
         max-width: 90vw;
@@ -520,11 +520,11 @@ h3{
            min-height: 90vh;
        }
        .skill-content{
-        transform: translateY(-4rem)
+        transform: translateY(-2rem)
        }
        .skill-list{
            display: block;
-           top: 14% ;
+           top: 18% ;
            
        }
        .skill-list div{
