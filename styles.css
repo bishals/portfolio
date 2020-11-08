@@ -15,7 +15,7 @@ html, body{
 }
 body{
     
-    padding: 0 5px;
+    /* padding: 0 5px; */
     text-align: center;
     font-family: 'Merriweather', serif;
 }
@@ -136,7 +136,7 @@ h2, .line{
 }
 
 h3{
-    font-size: 28px;
+    font-size: 26px;
     font-weight: normal;
     margin-top: 100px;
 }
@@ -415,35 +415,137 @@ h3{
 }
 
 @media screen and (max-width: 600px){
+    #nav-menu:checked ~ #mysites{
+        top: 102%;
+    }
+    #nav-menu:checked ~ #books{
+        top: 202%;
+    }
+    #nav-menu:checked ~ #skills{
+        top: 441%;
+    }
+    #nav-menu:checked ~ #contact{
+        top: 531%;
+    }
+    .about-container, #books{
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
 
+    }
+    .about-container{
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.199),rgba(170, 167, 157, 0.95)), url("images/lion.jpg") center fixed;  
+
+        background-size: 100% 100%;
+    }
+    .about-container, .container{
+        min-width: auto;
+    }
+    
+    .about-container, .container:not(.contact-me), #skills, #books{
+       padding: 10px;
+       min-height: 60vh;
+       height: auto;
+       
+    }
+    #about{
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(0);
+        height: 100%;
+        padding: 5px;
+        
+    }
+    .profile-image{
+       position: absolute;
+       top: 10%;
+       left: 50%;
+       transform: translateX(-50%);
+        width: auto;
+    }
+    .about-content{
+        min-width: 278px;
+        width: 90%;
+        padding: 5px;
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+       transform: translateX(-50%);
+      
+    }
+    #mysites{
+        min-height: 100vh;
+    }
+    .site-image{
+        /* width: 110%; */
+        top: 0;
+        margin-top: 6rem;
+    }
+
+    #nav-menu:checked ~ .about-container .profile-image{
+       position: absolute;
+       top: 35%;
+       right: 5px; 
+       min-height: 120px;  
+       min-width: 120px;
+    }
+   
+    #nav-menu:checked ~ .about-container .about-content{
+        width: 80%; 
+        top: 55%;
+    }
+    .mysites-content{
+        transform: translateY(-5rem);
+    }
     .note{
-        max-width: 70%;
+        max-width: 90vw;
+        width: 90%;
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
     }
-  
+    #books{
+        top: 160%;
+        padding: 5px;
+    }
+   .books-list{
+       display: block;
+   }
     .skill-list i{
         margin: 0;
        }
-       #books{
-           min-height: 190vh;
-       }
+       
        #skills{
-           top: 296%;
+           top: 399%;
+           z-index: 0;
+           min-height: 90vh;
        }
        .skill-content{
-        transform: translateY(25rem)
+        transform: translateY(-4rem)
        }
        .skill-list{
-           top: 75% ;
+           display: block;
+           top: 14% ;
            
        }
-       #contact{
-           top: 395%;
+       .skill-list div{
+           margin-bottom: 10px;
        }
- 
+       #contact{
+           top: 489%;
+       }
+   
 }
 
-
+@media screen and (max-width:330px){
+    .site-image{
+        margin-top: 7rem;
+    }
+    .site-image img{
+        width: 260px;
+        height: 185px;
+    }
+    .site-image img:hover{
+        transform: scale(1);
+    }
+}
 
