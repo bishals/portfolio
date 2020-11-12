@@ -20,8 +20,8 @@ body{
     font-family: 'Merriweather', serif;
 }
 #nav-icon{
-    position: absolute;
-    right: 0;
+    position: fixed;
+    right: 10px;
     z-index: 2000;
 }
 #nav-icon span{
@@ -34,6 +34,7 @@ body{
     transition: .25s ease-in-out;
     visibility: hidden;
 }
+
 #nav-menu:checked ~ #nav-icon span:nth-child(1){
     transform: rotate(135deg) translate(10px, -8px);
 }
@@ -228,7 +229,7 @@ h3{
     z-index: 2;
 }
 .skill-content{
-    transform: translateY(4.5rem);
+    transform: translateY(9.5rem);
 }
 .skill-list{
     position: absolute;
@@ -301,12 +302,12 @@ h3{
 @media screen and (max-width: 1200px){
   
   .mysites-content{
-    transform: translateY(8rem);
+    transform: translateY(12rem);
     
 }
 .site-image{
     position: absolute;
-    top: 20%;
+    top: 25%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -399,7 +400,7 @@ h3{
        top: 350%;
    }
    .skill-content{
-    transform: translateY(15rem)
+    transform: translateY(16rem)
    }
    .skill-list{
        top: 50% ;
@@ -419,10 +420,10 @@ h3{
         top: 202%;
     }
     #nav-menu:checked ~ #skills{
-        top: 441%;
+        top: 435%;
     }
     #nav-menu:checked ~ #contact{
-        top: 531%;
+        top: 525%;
     }
     .about-container, #books{
         clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
@@ -491,7 +492,13 @@ h3{
         top: 55%;
     }
     .mysites-content{
-        transform: translateY(-4rem);
+        transform: translateY(-3rem);
+    }
+    .site-image{
+        margin-top: 8rem;
+    }
+    .site-image img{
+        margin-top: 2em;
     }
     .note{
         max-width: 90vw;
@@ -512,27 +519,50 @@ h3{
        }
        
        #skills{
-           top: 399%;
+           top: 400%;
            z-index: 0;
            min-height: 90vh;
        }
        .skill-content{
-        transform: translateY(0rem)
+        transform: translateY(-1rem)
        }
        .skill-list{
            display: block;
-           top: 21% ;
+           top: 25% ;
            
        }
        .skill-list div{
            margin-bottom: 10px;
        }
        #contact{
-           top: 489%;
+           top: 490%;
        }
    
 }
-
+@media screen and (max-width: 376px){
+    .mysites-content{
+        transform: translateY(-5rem);
+        background-color: red;
+    }
+    .site-image{
+        margin-top: 6rem;
+    }
+    .site-image img{
+        margin-top: 1em;
+    }
+    #skills{
+        top: 428%;
+    }
+    .skill-content{
+        transform: translateY(-6rem)
+    }
+    .skill-list{
+        top: 14%;
+    }
+    #contact{
+        top: 518%;
+    }
+}
 @media screen and (max-width:330px){
     .site-image{
         margin-top: 7rem;
